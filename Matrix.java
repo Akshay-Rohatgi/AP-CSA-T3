@@ -12,6 +12,11 @@ public class Matrix extends Runner {
 
 
     @Override
+    public String desc() {
+        return "Matrix";
+    }
+
+    @Override
     public String toString() {
         int[][] kp = keypad();
         StringBuilder s = new StringBuilder();
@@ -85,6 +90,8 @@ public class Matrix extends Runner {
                 { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
                 { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 } };
     }
+
+
 
     // tester method for matrix formatting
     public void run() {

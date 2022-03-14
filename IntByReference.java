@@ -1,6 +1,11 @@
 public class IntByReference extends Runner {
     private int value;
 
+    @Override
+    public String desc() {
+        return "IntByReference";
+    }
+
     // Hack: create IntByReference, swapToLowHighOrder and toString methods
 
     public IntByReference(int n) {
