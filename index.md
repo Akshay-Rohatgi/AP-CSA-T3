@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+## Akshay Individual Github Pages
 
-You can use the [editor on GitHub](https://github.com/Akshay-Rohatgi/AP-CSA-T3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Challenge `TT0`:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I created a new menu that's much more efficient than the original one provided
+```java
+import java.util.HashMap;
+import java.util.Scanner;
 
-### Markdown
+public class NewMenu {
+    public static void main(String[] args) {
+        newMenu();
+    }
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    public static void newMenu() {
+        HashMap<Integer, Runner> menuOpts = new HashMap<Integer, Runner>();
 
-```markdown
-Syntax highlighted code block
+        menuOpts.put(1, new HelloWorld());
 
-# Header 1
-## Header 2
-### Header 3
+        System.out.println("-------------------------");
+        System.out.println("Choose from these choices");
+        System.out.println("-------------------------\n");
+        for (int i = 0; i < menuOpts.size(); i++) {
+            System.out.println((i+1) + " : " + menuOpts.get(i+1).toString());
+        }
 
-- Bulleted
-- List
+        System.out.print("num> ");
 
-1. Numbered
-2. List
+        try {
 
-**Bold** and _Italic_ and `Code` text
+            Scanner blue = new Scanner(System.in);
+            menuOpts.get(blue.nextInt()).run();
 
-[Link](url) and ![Image](src)
+        } catch (Exception e) {
+
+            System.out.println("Invalid Input");
+            System.exit(1);
+
+        }
+
+    }
+
+}
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Hashmap of `Runner` Objects, each new option/challenge will be a class that extends the Runner object. 
 
-### Jekyll Themes
+We can't add different types of objects to the hashmap, so we have to use a base Runner abstract class for everything. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Akshay-Rohatgi/AP-CSA-T3/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```java
+public abstract class Runner {
+    public abstract void run();
+}
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
