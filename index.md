@@ -53,3 +53,57 @@ public abstract class Runner {
 }
 ```
 
+Actual switching of values for IntByReference
+```java
+public class IntByReference extends Runner {
+
+    public void swapToLowHighOrder(IntByReference num) {
+        int blue = this.value;
+        int red = num.value;
+
+        if (blue > red) {
+            num.value = blue;
+            this.value = red;
+        }
+
+    }
+
+```
+
+Using stringbuilder with nested for loops
+```java
+@Override
+public String toString() {
+    int[][] kp = keypad();
+    StringBuilder s = new StringBuilder();
+    for (int i = 0; i < kp.length; i++) {
+        s.append("\n");
+        for (int j = 0; j < kp[i].length; j++) {
+            if (kp[i][j] < 0) {
+                s.append(" ");
+            } else {
+                s.append(kp[i][j]);
+            }
+        }
+    }
+
+    s.append("\n");
+    s.append("\n");
+
+    for (int b = kp.length - 1; b >= 0; b--) {
+        s.append("\n");
+        for (int c = kp[b].length -1; c >= 0; c--) {
+            if (kp[b][c] < 0) {
+                s.append(" ");
+            } else {
+                s.append(kp[b][c]);
+            }
+        }
+    }
+
+    s.append("\n");
+    return s.toString();
+}
+```
+
+
