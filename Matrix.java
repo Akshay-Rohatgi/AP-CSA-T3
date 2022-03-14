@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Matrix {
+public class Matrix extends Runner {
     private final int[][] matrix;
 
     // store matrix
@@ -87,7 +87,7 @@ public class Matrix {
     }
 
     // tester method for matrix formatting
-    public static void main(String[] args) {
+    public void run() {
         Matrix m0 = new Matrix(keypad());
         System.out.println("Keypad:");
         System.out.println(m0);
