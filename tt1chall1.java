@@ -23,4 +23,10 @@ public class tt1chall1 extends Runner {
         }
 
     }
+
+    @Override
+    public String desc() {
+        return "Tech Talk 1, Challenge 1";
+    }
+
 }
