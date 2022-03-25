@@ -12,6 +12,9 @@ public class NewMenu {
         menuOpts.put(1, new HelloWorld());
         menuOpts.put(2, new Matrix(new int[][]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, {-1, 0, -1} }));
         menuOpts.put(3, new IntByReference(1));
+        menuOpts.put(4, new tt1chall1());
+        menuOpts.put(5, new tt1chall2());
+        menuOpts.put(6, new tt1chall3());
 
         System.out.println("-------------------------");
         System.out.println("Choose from these choices");
