@@ -12,13 +12,15 @@ public class Stack<x> {
         s.add(info);
     }
 
-    public void pop(){
+    public x pop(){
         if(!s.isEmpty()){
             s.remove(s.size()-1);
+            return s.get(s.size()-1);
         }
         else{
             System.out.println("null");
         }
+        return null;
     }
 
     public x peak(){
