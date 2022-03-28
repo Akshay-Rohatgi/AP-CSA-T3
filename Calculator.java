@@ -185,16 +185,16 @@ public class Calculator extends Runner {
                         break;
                     case "+":
                         c = a + b;
-                        calculation.add(r);
+                        calculation.add(c);
                     case "-":
                         c = a - b;
-                        calculation.add(r);
+                        calculation.add(c);
                     case "*":
                         c = a * b;
-                        calculation.add(r);
+                        calculation.add(c);
                     case "/":
                         c = a/b;
-                        calculation.add(r);
+                        calculation.add(c);
                     default:
                         calculation.add(a);
                         calculation.add(b);

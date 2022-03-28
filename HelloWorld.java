@@ -7,6 +7,11 @@ public class HelloWorld extends Runner {
     }
 
     @Override
+    public String desc() {
+        return "HelloWorld";
+    }
+
+    @Override
     public String toString() {
         return "HelloWorld";
     }
