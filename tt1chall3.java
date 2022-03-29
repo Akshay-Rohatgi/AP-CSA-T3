@@ -38,6 +38,6 @@ public class tt1chall3 extends Runner {
 
     @Override
     public String desc() {
-        return null;
+        return "Tech Talk 1, Challenge 3";
     }
 }

@@ -1,2 +1,2 @@
 language = "java"
-run = "javac NewMenu.java; java NewMenu"
+run = "javac NewMenu.java; javac Queue.java; java NewMenu"
