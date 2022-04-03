@@ -3,7 +3,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class BubbleSorts {
+class BubbleSorts {
     private ArrayList<Integer> data = new ArrayList<>();
     private final Duration timeElapsed;
 
@@ -28,7 +28,7 @@ public class BubbleSorts {
         return timeElapsed.getNano();
     }
 
-    public static void main(String[] args) {
+    public static void run() {
         int sum=0, time=0, TIMES=12, SIZE=5000;
 
         for(int i=0; i< TIMES; i++) {

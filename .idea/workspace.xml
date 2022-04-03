@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BubbleSorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/BubbleSorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/BuiltInSorts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSorts">
+  <component name="RunManager" selected="Application.NewMenu">
     <configuration name="BubbleSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BubbleSorts" />
       <module name="AP-CSA-T3" />
@@ -66,15 +68,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectionSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SelectionSorts" />
+    <configuration name="NewMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NewMenu" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestInsertion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestInsertion" />
+    <configuration name="SelectionSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SelectionSorts" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,11 +92,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewMenu" />
+        <item itemvalue="Application.InsertionSorts" />
         <item itemvalue="Application.MergeSorts" />
         <item itemvalue="Application.BubbleSorts" />
         <item itemvalue="Application.SelectionSorts" />
-        <item itemvalue="Application.InsertionSorts" />
-        <item itemvalue="Application.TestInsertion" />
       </list>
     </recent_temporary>
   </component>
@@ -112,11 +114,22 @@
       <workItem from="1648453417672" duration="195000" />
       <workItem from="1648942147063" duration="6446000" />
       <workItem from="1648955895602" duration="1286000" />
-      <workItem from="1649015337418" duration="9918000" />
+      <workItem from="1649015337418" duration="11655000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

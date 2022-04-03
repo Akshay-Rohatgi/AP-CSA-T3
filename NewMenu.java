@@ -16,7 +16,8 @@ public class NewMenu {
         menuOpts.put(5, new tt1chall2());
         menuOpts.put(6, new tt1chall3());
         menuOpts.put(7, new CalculatorRunner());
-        menuOpts.put(8, new Leave());
+        menuOpts.put(8, new TestRunner());
+//        menuOpts.put(8, new Leave());
 
         while ( true ) {
             System.out.println("-------------------------");
