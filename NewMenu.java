@@ -15,29 +15,36 @@ public class NewMenu {
         menuOpts.put(4, new tt1chall1());
         menuOpts.put(5, new tt1chall2());
         menuOpts.put(6, new tt1chall3());
-        menuOpts.put(7, new Calculator("500 * 500"));
+        menuOpts.put(7, new Calculator("100 + 200 * 3"));
 
-        System.out.println("-------------------------");
-        System.out.println("Choose from these choices");
-        System.out.println("-------------------------\n");
-        for (int i = 0; i < menuOpts.size(); i++) {
-            System.out.println((i+1) + " : " + menuOpts.get(i+1).desc());
+
+        while ( true ) {
+            System.out.println("-------------------------");
+            System.out.println("Choose from these choices");
+            System.out.println("-------------------------\n");
+            for (int i = 0; i < menuOpts.size(); i++) {
+                System.out.println((i + 1) + " : " + menuOpts.get(i + 1).desc());
+            }
+
+            System.out.print("num> ");
+
+            try {
+
+                Scanner blue = new Scanner(System.in);
+
+//                if ( blue.nextInt() == 8 ) {
+//                    System.exit(0);
+//                }
+
+                menuOpts.get(blue.nextInt()).run();
+
+            } catch (Exception e) {
+
+                System.out.println("Invalid Input");
+                System.exit(1);
+
+            }
         }
-
-        System.out.print("num> ");
-
-        try {
-
-            Scanner blue = new Scanner(System.in);
-            menuOpts.get(blue.nextInt()).run();
-
-        } catch (Exception e) {
-
-            System.out.println("Invalid Input");
-            System.exit(1);
-
-        }
-
     }
 
 }

@@ -153,27 +153,32 @@ public class Calculator extends Runner {
     }
 
     // Takes RPN and produces a final result
-    private void rpnToResult()
+    private double rpnToResult()
     {
         int a;
         int b;
-        double c;
         double res;
         // Stack used to hold calculation while process RPN
         Stack calculation = new Stack();
+
+        ArrayList<String> copy = new ArrayList<>();
+
+        System.out.println(reverse_polish);
 
         for ( int i = 0; i < reverse_polish.size(); i++)
         {
             if (checkIfNum(reverse_polish.get(i)))
             {
                 calculation.add(reverse_polish.get(i));
+
             }
             else
             {
                 // Pop the two top entries
-                a = (Integer) calculation.pop();
-                b = (Integer) calculation.pop();
 
+                a = Integer.parseInt(calculation.pop().toString());
+                b = Integer.parseInt(calculation.pop().toString());
+                System.out.println(calculation);
                 // Based off of Token operator calculate result
 
                 switch ( (String) reverse_polish.get(i)) {
@@ -182,27 +187,38 @@ public class Calculator extends Runner {
                     case ")":
                         calculation.add(a);
                         calculation.add(b);
+                        System.out.println(" parentheses " + calculation);
                         break;
                     case "+":
-                        c = a + b;
-                        calculation.add(c);
+                        calculation.add(a+b);
+                        System.out.println(" added " + calculation);
+                        break;
                     case "-":
-                        c = a - b;
-                        calculation.add(c);
+                        calculation.add(a-b);
+                        System.out.println(" minus " + calculation);
+                        break;
                     case "*":
-                        c = a * b;
-                        calculation.add(c);
+                        calculation.add(a*b);
+                        System.out.println(" multiply " + calculation);
+                        break;
                     case "/":
-                        c = a/b;
-                        calculation.add(c);
+                        calculation.add(a/b);
+                        System.out.println(" divide " + calculation);
+                        break;
                     default:
                         calculation.add(a);
                         calculation.add(b);
+                        System.out.println(" default " + calculation);
+                        break;
+
                 }
+                //reverse_polish.remove(i);
+                System.out.println(calculation);
 
             }
         }
-        res = (Double) calculation.pop();
+        res = Double.parseDouble(calculation.pop().toString());
+        return res;
     }
 
 
@@ -214,7 +230,7 @@ public class Calculator extends Runner {
         System.out.println("Original expression: " + this.expression + "\n" +
                 "Tokenized expression: " + this.tokens.toString() + "\n" +
                 "Reverse Polish Notation: " +this.reverse_polish.toString() + "\n" +
-                "Final result: " + String.format("%.2f", this.result));
+                "Final result: " + String.format("%.2f", this.rpnToResult()));
 
     }
 

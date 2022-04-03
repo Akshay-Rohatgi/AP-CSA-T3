@@ -14,8 +14,9 @@ public class Stack<x> {
 
     public x pop(){
         if(!s.isEmpty()){
+            var k = s.get(s.size() -1);
             s.remove(s.size()-1);
-            return s.get(s.size()-1);
+            return k;
         }
         else{
             System.out.println("null");
@@ -46,4 +47,10 @@ public class Stack<x> {
         System.out.println(s);
     }
 
+    @Override
+    public String toString() {
+        return "Stack{" +
+                "s=" + s +
+                '}';
+    }
 }
