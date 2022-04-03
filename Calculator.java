@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Calculator extends Runner {
+public class Calculator {
     private final String expression;
     private ArrayList<String> tokens;
     private ArrayList<String> reverse_polish;
@@ -20,6 +20,7 @@ public class Calculator extends Runner {
     private final Map<String, Integer> OPERATORS = new HashMap<>();
     {
         // Map<"token", precedence>
+        OPERATORS.put("^", 3);
         OPERATORS.put("*", 3);
         OPERATORS.put("/", 3);
         OPERATORS.put("%", 3);
@@ -118,6 +119,7 @@ public class Calculator extends Runner {
                 case "*":
                 case "/":
                 case "%":
+                case "^":
                     // While stack
                     // not empty AND stack top element
                     // and is an operator
@@ -152,12 +154,26 @@ public class Calculator extends Runner {
         }
     }
 
+    public ArrayList<String> getReverse_polish() {
+        return reverse_polish;
+    }
+
+    public ArrayList<String> getTokens() {
+        return tokens;
+    }
+
+
+    double res;
+
+    public double getRes() {
+        return res;
+    }
+
     // Takes RPN and produces a final result
     private double rpnToResult()
     {
         int a;
         int b;
-        double res;
         // Stack used to hold calculation while process RPN
         Stack calculation = new Stack();
 
@@ -205,6 +221,10 @@ public class Calculator extends Runner {
                         calculation.add(a/b);
                         System.out.println(" divide " + calculation);
                         break;
+                    case "^":
+                        calculation.add(a^b);
+                        System.out.println(" power " + calculation);
+                        break;
                     default:
                         calculation.add(a);
                         calculation.add(b);
@@ -222,20 +242,4 @@ public class Calculator extends Runner {
     }
 
 
-    @Override
-    public void run() {
-        Scanner in = new Scanner(System.in);
-        String exp = in.nextLine();
-        Calculator running = new Calculator(exp);
-        System.out.println("Original expression: " + this.expression + "\n" +
-                "Tokenized expression: " + this.tokens.toString() + "\n" +
-                "Reverse Polish Notation: " +this.reverse_polish.toString() + "\n" +
-                "Final result: " + String.format("%.2f", this.rpnToResult()));
-
-    }
-
-    @Override
-    public String desc() {
-        return "Calculator";
-    }
 }

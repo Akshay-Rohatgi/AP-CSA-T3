@@ -5,12 +5,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +66,7 @@
       <workItem from="1648453117147" duration="174000" />
       <workItem from="1648453308409" duration="68000" />
       <workItem from="1648453417672" duration="195000" />
-      <workItem from="1648942147063" duration="2534000" />
+      <workItem from="1648942147063" duration="4103000" />
     </task>
     <servers />
   </component>
