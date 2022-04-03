@@ -221,9 +221,9 @@ public class Calculator {
                         calculation.add(a/b);
                         System.out.println(" divide " + calculation);
                         break;
-                    case "^":
-                        calculation.add(a^b);
-                        System.out.println(" power " + calculation);
+                    case "%":
+                        calculation.add(a%b);
+                        System.out.println(" modulo " + calculation);
                         break;
                     default:
                         calculation.add(a);
