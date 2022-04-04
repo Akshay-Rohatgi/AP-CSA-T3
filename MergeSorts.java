@@ -73,15 +73,12 @@ class TestMerge
         int i = 0, j = 0;
 
         int k = l;
-        while (i < n1 && j < n2)
-        {
-            if (L[i] <= R[j])
-            {
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
                 arr.set(k, L[i]);
                 i++;
             }
-            else
-            {
+            else {
                 arr.set(k, R[j]);
                 j++;
             }
@@ -89,16 +86,14 @@ class TestMerge
         }
 
         // copy last few elements of l
-        while (i < n1)
-        {
+        while (i < n1) {
             arr.set(k, L[i]);
             i++;
             k++;
         }
 
         // copy last few elements of r
-        while (j < n2)
-        {
+        while (j < n2) {
             arr.set(k, R[j]);
             j++;
             k++;
@@ -106,10 +101,8 @@ class TestMerge
     }
 
     // Main function that sorts using merge()
-    void sort(ArrayList<Integer> arr, int l, int r)
-    {
-        if (l < r)
-        {
+    void sort(ArrayList<Integer> arr, int l, int r) {
+        if (l < r) {
             // Find the middle point
             int m = (l+r)/2;
 
@@ -122,8 +115,7 @@ class TestMerge
         }
     }
 
-    static void printArray(ArrayList<Integer> arr)
-    {
+    static void printArray(ArrayList<Integer> arr) {
         for (Integer integer : arr) System.out.print(integer + " ");
         System.out.println();
     }

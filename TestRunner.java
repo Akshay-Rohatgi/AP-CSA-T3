@@ -2,7 +2,7 @@ public class TestRunner extends Runner {
 
     @Override
     public String desc() {
-        return "Runs all sorts";
+        return "Runs all sorts (with analytics)";
     }
 
     @Override
@@ -16,8 +16,8 @@ public class TestRunner extends Runner {
                 // System.out.println(s.getData());
                 sum += s.getData().get(j);
             }
-            System.out.println("Average random: " + sum / ((i+1)*SIZE));
-            System.out.println("Nanoseconds: " + s.getTimeElapsed());
+//            System.out.println("Average random: " + sum / ((i+1)*SIZE));
+//            System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
         }
 
@@ -42,8 +42,8 @@ public class TestRunner extends Runner {
                 // System.out.println(s.getData());
                 sum += s.getData().get(j);
             }
-            System.out.println("Average random: " + sum / ((i+1)*SIZE));
-            System.out.println("Nanoseconds: " + s.getTimeElapsed());
+//            System.out.println("Average random: " + sum / ((i+1)*SIZE));
+//            System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
         }
 
@@ -68,8 +68,8 @@ public class TestRunner extends Runner {
                 // System.out.println(s.getData());
                 sum += s.getData().get(j);
             }
-            System.out.println("Average random: " + sum / ((i+1)*SIZE));
-            System.out.println("Nanoseconds: " + s.getTimeElapsed());
+//            System.out.println("Average random: " + sum / ((i+1)*SIZE));
+//            System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
         }
 
@@ -95,8 +95,8 @@ public class TestRunner extends Runner {
                 // System.out.println(s.getData());
                 sum += s.getData().get(j);
             }
-            System.out.println("Average random: " + sum / ((i+1)*SIZE));
-            System.out.println("Nanoseconds: " + s.getTimeElapsed());
+//            System.out.println("Average random: " + sum / ((i+1)*SIZE));
+//            System.out.println("Nanoseconds: " + s.getTimeElapsed());
             time += s.getTimeElapsed();
         }
 

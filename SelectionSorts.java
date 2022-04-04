@@ -54,14 +54,14 @@ class TestSelection {
 
     public TestSelection(ArrayList<Integer> n) {
         this.input = n;
-        sortGivenArray();
+        sort();
     }
 
     public ArrayList<Integer> getData() {
         return input;
     }
 
-    void sortGivenArray(){
+    void sort(){
 
         int a = 0;
         int j=0;
