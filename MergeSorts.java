@@ -51,8 +51,7 @@ public class MergeSorts {
 class TestMerge
 {
 
-    void merge(ArrayList<Integer> arr, int l, int m, int r)
-    {
+    void merge(ArrayList<Integer> arr, int l, int m, int r) {
         // size
         int n1 = m - l + 1;
         int n2 = r - m;
