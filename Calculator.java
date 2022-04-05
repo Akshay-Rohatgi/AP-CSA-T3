@@ -1,15 +1,84 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
 
 public class Calculator {
-    private final String expression;
-    private ArrayList<String> tokens;
     private ArrayList<String> reverse_polish;
+    private String expression;
+    private ArrayList<String> tokens;
     private Double result;
+    //private Double ANS; //previous answer
 
-    private final Map<String, Integer> SEPARATORS = new HashMap<>();
+    class Stack {
+        LinkedList<Object> s;
+    
+        public Stack(LinkedList a) {
+            s = a;
+        }
+    
+        public void push(Object x) {
+            s.add(0, x);
+        }
+    
+        public void pop() {
+            s.removeFirst();
+        }
+    
+        public Object peek() {
+            return(s.getFirst());
+        }
+    
+        public int size() {
+            return(s.size());
+        }
+    }
+
+    public Calculator(String expression) {
+
+        System.out.println("Welcome to calculator");
+        // original input
+        this.expression = expression;
+        //System.out.println("Original expression: " + this.expression);
+
+        // parse expression into terms
+        this.termTokenizer();
+        // System.out.println("Tokenized expression: " + this.tokens.toString()); 
+    
+        // place terms into reverse polish notation
+        this.tokensToReversePolishNotation();
+        //System.out.println("Reverse Polish Notation: " +this.reverse_polish.toString());
+    
+        //System.out.println(this.toString());
+        // calculate reverse polish notation
+        this.rpnToResult();
+    }
+  
+    private final HashMap<String, Integer> OPERATORS = new HashMap<>();
+    {
+        // Map<"token", precedence>
+        OPERATORS.put("*", 3);
+        OPERATORS.put("/", 3);
+        OPERATORS.put("%", 3);
+        OPERATORS.put("+", 4);
+        OPERATORS.put("-", 4);
+        OPERATORS.put("^", 2);
+        OPERATORS.put("SQRT", 2);
+    }
+
+    private final HashMap<String, Integer> NUMOPERANDS = new HashMap<>();
+    {
+        // Map<"token", precedence>
+        NUMOPERANDS.put("*", 2);
+        NUMOPERANDS.put("/", 2);
+        NUMOPERANDS.put("%", 2);
+        NUMOPERANDS.put("+", 2);
+        NUMOPERANDS.put("-", 2);
+        NUMOPERANDS.put("^", 2);
+        NUMOPERANDS.put("SQRT", 1);
+    }
+
+  
+    private final HashMap<String, Integer> SEPARATORS = new HashMap<>();
     {
         // Map<"separator", not_used>
         SEPARATORS.put(" ", 0);
@@ -17,33 +86,88 @@ public class Calculator {
         SEPARATORS.put(")", 0);
     }
 
-    private final Map<String, Integer> OPERATORS = new HashMap<>();
-    {
-        // Map<"token", precedence>
-        OPERATORS.put("^", 3);
-        OPERATORS.put("*", 3);
-        OPERATORS.put("/", 3);
-        OPERATORS.put("%", 3);
-        OPERATORS.put("+", 4);
-        OPERATORS.put("-", 4);
+  // Test if token is an operator
+    private boolean isOperator(String token) {
+        // find the token in the hash map
+        return OPERATORS.containsKey(token);
     }
 
-    // Create a 1 argument constructor expecting a mathematical expression
-    public Calculator(String expression) {
-        // original input
-        this.expression = expression;
-
-        // parse expression into terms
-        this.termTokenizer();
-
-        // place terms into reverse polish notation
-        this.tokensToReversePolishNotation();
-
-        // calculate reverse polish notation
-        this.rpnToResult();
+    // Test if token is an separator
+    private boolean isSeperator(String token) {
+        // find the token in the hash map
+        return SEPARATORS.containsKey(token);
     }
 
-    // Term Tokenizer takes original expression and converts it to ArrayList of tokens
+    // Compare precedence of operators.
+    private Boolean isPrecedent(String token1, String token2) {
+        // token 1 is precedent if it is greater than token 2
+
+        return (OPERATORS.get(token1) - OPERATORS.get(token2) >= 0) ;
+    }
+  
+    private void tokensToReversePolishNotation () {
+        // contains final list of tokens in RPN
+        this.reverse_polish = new ArrayList<String>();
+
+        // stack is used to reorder for appropriate grouping and precedence
+        LinkedList<String> aaaaa = new LinkedList<>();
+        Stack tokenStack = new Stack(aaaaa);
+    
+        for (String token : tokens) {
+          //System.out.println("token = " + token);
+            switch (token) {
+                // If left bracket push token on to stack
+                case "(":
+                    tokenStack.push(token);
+                    break;
+                case ")":
+                    while (tokenStack.peek() != null && !tokenStack.peek().equals("("))
+                    {
+                        reverse_polish.add( (String)tokenStack.peek() );
+                        tokenStack.pop();
+                    }
+                    tokenStack.pop();
+                    break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                case "%":
+                case "^":
+                case "SQRT":
+                    // While stack
+                    // not empty AND stack top element
+                    // and is an operator
+                    //System.out.println("is operator");
+                    while (tokenStack.size() > 0 && tokenStack.peek() != null && isOperator((String) tokenStack.peek()))
+                    {
+                      //System.out.println("entry while " + token + " peek " + (String) tokenStack.peek());
+                        if ( isPrecedent(token, (String) tokenStack.peek() )) {
+                            reverse_polish.add((String)tokenStack.peek());
+                            tokenStack.pop();
+                            //System.out.println("c: " + this.reverse_polish.toString());
+                            continue;
+                        }
+                        break;
+                    }
+                    // Push the new operator on the stack
+                    //System.out.println("break while");
+                    tokenStack.push(token);
+                    //System.out.println("a: " + tokenStack.toString());
+                    break;
+                default:    // Default should be a number, there could be test here
+                    this.reverse_polish.add(token);
+                    //System.out.println("b: " + this.reverse_polish.toString());
+            }
+        }
+        // Empty remaining tokens
+        while (tokenStack.size() > 0 && tokenStack.peek() != null) {
+            this.reverse_polish.add((String)tokenStack.peek());
+            tokenStack.pop();
+        }
+
+    } //tokensToReversePolishNotation
+
     private void termTokenizer() {
         // contains final list of tokens
         this.tokens = new ArrayList<>();
@@ -75,171 +199,98 @@ public class Calculator {
         if (multiCharTerm.length() > 0) {
             tokens.add(this.expression.substring(start));
         }
+        // for (int w = 0; w < tokens.size(); w++) {
+        //     if (tokens.get(w).equals("ANS")) {
+        //         tokens.set(w, String.valueOf(ANS));
+        //     }
+        // }
+    } //termTokenizer
+
+    // public void setANS(Double k) {
+    //     ANS = k;
+    // }
+
+    // public Double getAns() {
+    //     return(ANS);
+    // }
+    public String getAns() {
+        return(String.format("%.8f", this.result));
     }
 
-    // Test if token is an operator
-    private boolean isOperator(String token) {
-        // find the token in the hash map
-        return OPERATORS.containsKey(token);
-    }
+    private void rpnToResult(){
+        
+        LinkedList<Double> ccccc= new LinkedList<>();
+        Stack calculation = new Stack(ccccc);
+        Double a = 0.0, b = 0.0;
 
-    // Test if token is an separator
-    private boolean isSeperator(String token) {
-        // find the token in the hash map
-        return SEPARATORS.containsKey(token);
-    }
-
-    // Compare precedence of operators.
-    private Boolean isPrecedent(String token1, String token2) {
-        // token 1 is precedent if it is greater than token 2
-        return (OPERATORS.get(token1) - OPERATORS.get(token2) >= 0) ;
-    }
-
-    private void tokensToReversePolishNotation () {
-        // contains final list of tokens in RPN
-        this.reverse_polish = new ArrayList<>();
-
-        // stack is used to reorder for appropriate grouping and precedence
-        Stack<String> tokenStack = new Stack<String>();
-        for (String token : tokens) {
-            switch (token) {
-                // If left bracket push token on to stack
-                case "(":
-                    tokenStack.add(token);
-                    break;
-                case ")":
-                    while (tokenStack.peak() != null && !tokenStack.peak().equals("("))
-                    {
-                        reverse_polish.add( (String)tokenStack.pop() );
-                    }
-                    tokenStack.pop();
-                    break;
-                case "+":
-                case "-":
-                case "*":
-                case "/":
-                case "%":
-                case "^":
-                    // While stack
-                    // not empty AND stack top element
-                    // and is an operator
-                    while (tokenStack.peak() != null && isOperator(tokenStack.peak()))
-                    {
-                        if ( isPrecedent(token, (String) tokenStack.peak() )) {
-                            reverse_polish.add((String)tokenStack.pop());
-                            continue;
-                        }
+        for (int i=0; i<reverse_polish.size(); i++)  {
+            if (!OPERATORS.containsKey(reverse_polish.get(i))) {
+                calculation.push(Double.parseDouble(reverse_polish.get(i)));
+            } //is number
+            else {
+                if (NUMOPERANDS.get(reverse_polish.get(i)) == 1) {
+                    a = (Double)(calculation.peek());
+                    calculation.pop();
+                } else {
+                    //assume 2 operands otherwise
+                    a = (Double)(calculation.peek());
+                    calculation.pop();
+                    b = (Double)(calculation.peek());
+                    calculation.pop();
+                }
+                switch(reverse_polish.get(i)) { 
+                    case "+":
+                        calculation.push((a + b));
                         break;
-                    }
-                    // Push the new operator on the stack
-                    tokenStack.add(token);
-                    break;
-                default:    // Default should be a number, there could be test here
-                    this.reverse_polish.add(token);
-            }
-        }
-        // Empty remaining tokens
-        while (tokenStack.peak() != null) {
-            reverse_polish.add((String)tokenStack.pop());
-        }
+                    case "-":
+                        calculation.push((b - a));
+                        break;
+                    case "*":
+                        calculation.push((a * b));
+                        break;
+                    case "/":
+                        calculation.push((b / a));
+                        break;
+                    case "%":
+                        calculation.push((b % a));
+                        break;
+                    case "^":
+                        calculation.push((Math.pow(b, a)));
+                        break;
+                    case "SQRT":
+                        calculation.push((Math.sqrt(a)));
+                        break;
+                    }//switch
 
-    }
+                }   //is operand
+        
+            } //for
 
-    public boolean checkIfNum(String item) {
-        try {
-            int intValue = Integer.parseInt(item);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
+            this.result = (Double)calculation.peek();
+            calculation.pop();
         }
-    }
-
-    public ArrayList<String> getReverse_polish() {
-        return reverse_polish;
+  
+    public String toString() {
+        //ANS = Double.parseDouble(String.format("%.4f", this.result));
+        return ("Original expression: " + this.expression + "\n" +
+                "Tokenized expression: " + this.tokens.toString() + "\n" +
+                "Reverse Polish Notation: " +this.reverse_polish.toString() + "\n" +
+                "Final result: " + String.format("%.4f", this.result)) + "\n";
     }
 
     public ArrayList<String> getTokens() {
         return tokens;
     }
 
-
-    double res;
-
-    public double getRes() {
-        return res;
+    public ArrayList<String> getReverse_polish() {
+        return reverse_polish;
     }
 
-    // Takes RPN and produces a final result
-    private double rpnToResult()
-    {
-        int a;
-        int b;
-        // Stack used to hold calculation while process RPN
-        Stack calculation = new Stack();
-
-        ArrayList<String> copy = new ArrayList<>();
-
-        System.out.println(reverse_polish);
-
-        for ( int i = 0; i < reverse_polish.size(); i++)
-        {
-            if (checkIfNum(reverse_polish.get(i)))
-            {
-                calculation.add(reverse_polish.get(i));
-
-            }
-            else
-            {
-                // Pop the two top entries
-
-                a = Integer.parseInt(calculation.pop().toString());
-                b = Integer.parseInt(calculation.pop().toString());
-                System.out.println(calculation);
-                // Based off of Token operator calculate result
-
-                switch ( (String) reverse_polish.get(i)) {
-                    // If left bracket push token on to stack
-                    case "(":
-                    case ")":
-                        calculation.add(a);
-                        calculation.add(b);
-                        System.out.println(" parentheses " + calculation);
-                        break;
-                    case "+":
-                        calculation.add(a+b);
-                        System.out.println(" added " + calculation);
-                        break;
-                    case "-":
-                        calculation.add(a-b);
-                        System.out.println(" minus " + calculation);
-                        break;
-                    case "*":
-                        calculation.add(a*b);
-                        System.out.println(" multiply " + calculation);
-                        break;
-                    case "/":
-                        calculation.add(a/b);
-                        System.out.println(" divide " + calculation);
-                        break;
-                    case "%":
-                        calculation.add(a%b);
-                        System.out.println(" modulo " + calculation);
-                        break;
-                    default:
-                        calculation.add(a);
-                        calculation.add(b);
-                        System.out.println(" default " + calculation);
-                        break;
-
-                }
-                //reverse_polish.remove(i);
-                System.out.println(calculation);
-
-            }
-        }
-        res = Double.parseDouble(calculation.pop().toString());
-        return res;
+    public Object getRes() {
+        return null;
     }
 
+    
+  
 
 }
