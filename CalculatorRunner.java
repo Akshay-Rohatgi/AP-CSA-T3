@@ -1,20 +1,36 @@
 import java.util.Scanner;
 
 public class CalculatorRunner extends Runner {
+    String prevAns = "";
+    String varX = "";
+    String varY = "";
+
     @Override
     public void run() {
         System.out.print("Expression> ");
         Scanner in = new Scanner(System.in);
         String exp = in.nextLine();
+        if (exp.equals("SETVAR")) {
+            // System.out.println("Print 'EXIT' to stop adding variables.");
+            // while (scanner.nextLine().equals("EXIT") == false) {
+            //     System.out.println("Set variable X" + vars.size() + ": ");
+            //     vars.add(scanner.nextLine())
+            // }
+            System.out.println("X = ?");
+            varX = in.nextLine();
+            System.out.println("Y = ?");
+            varY = in.nextLine();
+        }
         if (exp.toString().equals("test")) {
             this.testDataRunner();
 
         } else {
-            Calculator running = new Calculator(exp);
+            Calculator running = new Calculator(((((exp.replaceAll("ANS", prevAns)).replaceAll("e", "2.718281828459")).replaceAll("pi", "3.14159265359")).replaceAll("X", varX)).replaceAll("Y", varY));
             System.out.println("Original expression: " + exp + "\n" +
                     "Tokenized expression: " + running.getTokens().toString() + "\n" +
                     "Reverse Polish Notation: " + running.getReverse_polish().toString() + "\n" +
                     "Final result: " + running.getAns());
+                    prevAns = running.getAns();
         }
 
     }
