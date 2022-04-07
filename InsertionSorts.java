@@ -62,6 +62,7 @@ class TestInsertion {
             int temp = input.get(k);
             int j= k-1;
             while(j>=0 && temp <= input.get(j))   {
+                //goes through the first j and places the j + 1 element in the right place, shifting everything in front of it up one spot
                 input.set(j + 1, input.get(j));
                 j = j-1;
             }

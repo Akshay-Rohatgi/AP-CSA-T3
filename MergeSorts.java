@@ -50,6 +50,7 @@ public class MergeSorts {
 
 class TestMerge
 {
+    //method to merge two sorted arraylists (only needs to peek)
 
     void merge(ArrayList<Integer> arr, int l, int m, int r) {
         // size

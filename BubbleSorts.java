@@ -57,10 +57,12 @@ class TestBubble {
     void sort() {
         int temp;
         for (int i=0; i< input.size(); i++){
+            //iterates through the list a sufficient number of times
             for(int j= i; j< input.size()-1; j++){
                 int first = input.get(i);
                 int sec = input.get(j + 1);
                 if (first > sec)  {
+                    //swaps adjacent if they are in the wrong order
                     temp = input.get(j + 1);
                     input.set(j + 1, input.get(i));
                     input.set(i, temp);
