@@ -9,6 +9,8 @@ public class Calculator {
     private Double result;
     //private Double ANS; //previous answer
 
+
+    //create a stack object to organize RPN
     class Stack {
         LinkedList<Object> s;
     
@@ -53,6 +55,8 @@ public class Calculator {
         this.rpnToResult();
     }
   
+
+    //Operators organizes the possible operations based on precedence (PEMDAS)
     private final HashMap<String, Integer> OPERATORS = new HashMap<>();
     {
         // Map<"token", precedence>
@@ -65,6 +69,8 @@ public class Calculator {
         OPERATORS.put("SQRT", 2);
     }
 
+
+    //Numoperands generalizes the OPERATORS and groups them
     private final HashMap<String, Integer> NUMOPERANDS = new HashMap<>();
     {
         // Map<"token", precedence>
@@ -78,6 +84,7 @@ public class Calculator {
     }
 
   
+    //Separators add parantheses 
     private final HashMap<String, Integer> SEPARATORS = new HashMap<>();
     {
         // Map<"separator", not_used>
@@ -105,6 +112,8 @@ public class Calculator {
         return (OPERATORS.get(token1) - OPERATORS.get(token2) >= 0) ;
     }
   
+
+    //this method reorders the tokens into an order taking order of operations into account
     private void tokensToReversePolishNotation () {
         // contains final list of tokens in RPN
         this.reverse_polish = new ArrayList<String>();
@@ -197,32 +206,24 @@ public class Calculator {
         }
         // Add last term
         if (multiCharTerm.length() > 0) {
-            tokens.add(this.expression.substring(start));
+            tokens.add(this.expression.substring(start));}
         }
-        // for (int w = 0; w < tokens.size(); w++) {
-        //     if (tokens.get(w).equals("ANS")) {
-        //         tokens.set(w, String.valueOf(ANS));
-        //     }
-        // }
-    } //termTokenizer
-
-    // public void setANS(Double k) {
-    //     ANS = k;
-    // }
-
-    // public Double getAns() {
-    //     return(ANS);
-    // }
+        
+    //returns a string, only takes 8 decimal digits
     public String getAns() {
         return(String.format("%.8f", this.result));
     }
 
+
+    //how the RPN stack is evaluated to get an answer
     private void rpnToResult(){
         
         LinkedList<Double> ccccc= new LinkedList<>();
         Stack calculation = new Stack(ccccc);
         Double a = 0.0, b = 0.0;
 
+
+        //always takes the next two numbers and the next operation, analyzes how they should work together to get a result
         for (int i=0; i<reverse_polish.size(); i++)  {
             if (!OPERATORS.containsKey(reverse_polish.get(i))) {
                 calculation.push(Double.parseDouble(reverse_polish.get(i)));
@@ -238,6 +239,8 @@ public class Calculator {
                     b = (Double)(calculation.peek());
                     calculation.pop();
                 }
+
+                //replaces the element and operation with the result produced
                 switch(reverse_polish.get(i)) { 
                     case "+":
                         calculation.push((a + b));
