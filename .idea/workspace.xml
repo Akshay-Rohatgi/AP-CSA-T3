@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SelectionSorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/SelectionSorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +112,7 @@
       <workItem from="1648942147063" duration="6446000" />
       <workItem from="1648955895602" duration="1286000" />
       <workItem from="1649015337418" duration="13827000" />
+      <workItem from="1649386154736" duration="607000" />
     </task>
     <servers />
   </component>
@@ -130,5 +129,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
