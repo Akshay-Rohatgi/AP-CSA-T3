@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// Implementation and use of first-in first-out (FIFO) principle
+
 public class Stack<x> {
     private ArrayList<x> s = new ArrayList<x>();
 
@@ -8,10 +10,12 @@ public class Stack<x> {
 
     }
 
+    // add data
     public void add(x info){
         s.add(info);
     }
 
+    // Same as queue, except this removes last item that came in, rather than the last item in the list
     public x pop(){
         if(!s.isEmpty()){
             var k = s.get(s.size() -1);
@@ -24,6 +28,7 @@ public class Stack<x> {
         return null;
     }
 
+    // Peak at top of dataset
     public x peak(){
         if(!s.isEmpty()){
             return s.get(s.size() -1 );
@@ -43,10 +48,12 @@ public class Stack<x> {
         s.clear();
     }
 
+    // Display arraylist
     public void display(){
         System.out.println(s);
     }
 
+    // Custom toString method used for testing/debugging
     @Override
     public String toString() {
         return "Stack{" +

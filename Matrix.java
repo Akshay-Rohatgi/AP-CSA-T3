@@ -36,6 +36,7 @@ public class Matrix extends Runner {
         s.append("\n");
         s.append("\n");
 
+        // Loop through multidimensional array
         for (int b = kp.length - 1; b >= 0; b--) {
             s.append("\n");
             for (int c = kp[b].length -1; c >= 0; c--) {
@@ -54,6 +55,7 @@ public class Matrix extends Runner {
         return s.toString();
     }
 
+    // Custom toString method
     public String toString(boolean x) {
         int[][] num = numbers();
         StringBuilder s2 = new StringBuilder();

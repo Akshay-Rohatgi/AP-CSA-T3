@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -113,6 +119,8 @@
       <workItem from="1648955895602" duration="1286000" />
       <workItem from="1649015337418" duration="13827000" />
       <workItem from="1649386154736" duration="607000" />
+      <workItem from="1650245927571" duration="1437000" />
+      <workItem from="1650247741263" duration="790000" />
     </task>
     <servers />
   </component>
