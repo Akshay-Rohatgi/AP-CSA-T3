@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class SparseArray {
+public class SparseArray extends Runner {
     private int numRows;
     private int numCols;
 
@@ -39,4 +39,13 @@ public class SparseArray {
         }
     }
 
+    @Override
+    public void run() {
+        System.out.println("Available methods: removeColumn, getValueAt");
+    }
+
+    @Override
+    public String desc() {
+        return "SparseArray";
+    }
 }

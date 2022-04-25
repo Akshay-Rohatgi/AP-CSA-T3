@@ -18,7 +18,11 @@ public class NewMenu {
         menuOpts.put(6, new tt1chall3());
         menuOpts.put(7, new CalculatorRunner());
         menuOpts.put(8, new TestRunner());
-        menuOpts.put(9, new Leave());
+        menuOpts.put(9, new DiverseArray());
+        menuOpts.put(10, new HiddenWord("foo"));
+        menuOpts.put(11, new SparseArray());
+        menuOpts.put(12, new MultipleGroups());
+        menuOpts.put(13, new Leave());
 
         while ( true ) {
             System.out.println("-------------------------");
@@ -32,16 +36,18 @@ public class NewMenu {
             System.out.print("num> ");
 
             // Try running user-specified option
-            try {
-
-                Scanner blue = new Scanner(System.in);
-                menuOpts.get(blue.nextInt()).run();
-
-            } catch (Exception e) {
-
-                System.out.println("Invalid Input");
-
-            }
+            Scanner blue = new Scanner(System.in);
+            menuOpts.get(blue.nextInt()).run();
+//            try {
+//
+//                Scanner blue = new Scanner(System.in);
+//                menuOpts.get(blue.nextInt()).run();
+//
+//            } catch (Exception e) {
+//
+//                System.out.println("Invalid Input");
+//
+//            }
         }
     }
 

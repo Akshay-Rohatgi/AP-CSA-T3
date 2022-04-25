@@ -35,6 +35,6 @@ public class HiddenWord extends Runner {
 
     @Override
     public String desc() {
-        return null;
+        return "HiddenWord";
     }
 }
