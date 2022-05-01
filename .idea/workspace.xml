@@ -45,7 +45,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArrayResizer">
+  <component name="RunManager" selected="Application.GameSpinner">
     <configuration name="ArrayResizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArrayResizer" />
       <module name="AP-CSA-T3" />
@@ -53,22 +53,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="InsertionSorts" />
+    <configuration name="GameSpinner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameSpinner" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MergeSorts" />
-      <module name="AP-CSA-T3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MultipleGroups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MultipleGroups" />
+    <configuration name="Hailstone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hailstone" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,6 +69,13 @@
     </configuration>
     <configuration name="NewMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewMenu" />
+      <module name="AP-CSA-T3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Theater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Theater" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,11 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameSpinner" />
+        <item itemvalue="Application.Hailstone" />
+        <item itemvalue="Application.Theater" />
         <item itemvalue="Application.ArrayResizer" />
         <item itemvalue="Application.NewMenu" />
-        <item itemvalue="Application.MultipleGroups" />
-        <item itemvalue="Application.InsertionSorts" />
-        <item itemvalue="Application.MergeSorts" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +119,7 @@
       <workItem from="1650247741263" duration="790000" />
       <workItem from="1650785606439" duration="3040000" />
       <workItem from="1650870427679" duration="1006000" />
-      <workItem from="1651430170350" duration="2504000" />
+      <workItem from="1651430170350" duration="9020000" />
     </task>
     <servers />
   </component>
@@ -137,5 +137,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GameSpinner.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
