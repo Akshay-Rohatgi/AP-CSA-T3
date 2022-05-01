@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiverseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/DiverseArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiddenWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/HiddenWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/SparseArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +45,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewMenu">
-    <configuration name="BubbleSorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BubbleSorts" />
+  <component name="RunManager" selected="Application.ArrayResizer">
+    <configuration name="ArrayResizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayResizer" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,11 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayResizer" />
         <item itemvalue="Application.NewMenu" />
         <item itemvalue="Application.MultipleGroups" />
         <item itemvalue="Application.InsertionSorts" />
         <item itemvalue="Application.MergeSorts" />
-        <item itemvalue="Application.BubbleSorts" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +118,8 @@
       <workItem from="1650245927571" duration="1437000" />
       <workItem from="1650247741263" duration="790000" />
       <workItem from="1650785606439" duration="3040000" />
-      <workItem from="1650870427679" duration="673000" />
+      <workItem from="1650870427679" duration="1006000" />
+      <workItem from="1651430170350" duration="2504000" />
     </task>
     <servers />
   </component>
