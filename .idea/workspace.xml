@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayResizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayResizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameSpinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameSpinner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hailstone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hailstone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReviewCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/Theater.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +28,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="270N629wdK1DDaP397z9HHyrdJp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,7 +48,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewMenu">
+  <component name="RunManager" selected="Application.Tester">
     <configuration name="GameSpinner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameSpinner" />
       <module name="AP-CSA-T3" />
@@ -81,8 +77,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Theater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Theater" />
+    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tester" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,11 +94,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tester" />
         <item itemvalue="Application.NewMenu" />
         <item itemvalue="Application.ReviewCollector" />
         <item itemvalue="Application.GameSpinner" />
         <item itemvalue="Application.Hailstone" />
-        <item itemvalue="Application.Theater" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +140,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
