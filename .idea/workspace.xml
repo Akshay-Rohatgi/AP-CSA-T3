@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc334d3-7ce7-41fa-bba3-67c2791f8c9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayResizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayResizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSpinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameSpinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hailstone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hailstone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReviewCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/Theater.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +52,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameSpinner">
-    <configuration name="ArrayResizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayResizer" />
-      <module name="AP-CSA-T3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.NewMenu">
     <configuration name="GameSpinner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameSpinner" />
       <module name="AP-CSA-T3" />
@@ -69,6 +69,13 @@
     </configuration>
     <configuration name="NewMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewMenu" />
+      <module name="AP-CSA-T3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReviewCollector" />
       <module name="AP-CSA-T3" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewMenu" />
+        <item itemvalue="Application.ReviewCollector" />
         <item itemvalue="Application.GameSpinner" />
         <item itemvalue="Application.Hailstone" />
         <item itemvalue="Application.Theater" />
-        <item itemvalue="Application.ArrayResizer" />
-        <item itemvalue="Application.NewMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +126,8 @@
       <workItem from="1650247741263" duration="790000" />
       <workItem from="1650785606439" duration="3040000" />
       <workItem from="1650870427679" duration="1006000" />
-      <workItem from="1651430170350" duration="9020000" />
+      <workItem from="1651430170350" duration="9270000" />
+      <workItem from="1651462693320" duration="1629000" />
     </task>
     <servers />
   </component>
@@ -137,16 +145,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GameSpinner.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

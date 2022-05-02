@@ -22,7 +22,11 @@ public class NewMenu {
         menuOpts.put(10, new HiddenWord("foo"));
         menuOpts.put(11, new SparseArray());
         menuOpts.put(12, new MultipleGroups());
-        menuOpts.put(13, new Leave());
+        menuOpts.put(13, new Hailstone());
+        menuOpts.put(14, new GameSpinner(12));
+        menuOpts.put(15, new ReviewCollector());
+        menuOpts.put(16, new Theater(3, 2, 1));
+        menuOpts.put(17, new Leave());
 
         while ( true ) {
             System.out.println("-------------------------");

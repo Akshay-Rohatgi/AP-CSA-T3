@@ -30,4 +30,11 @@ public class ProductReview
 
     { return review; }
 
+    @Override
+    public String toString() {
+        return "ProductReview{" +
+                "name='" + name + '\'' +
+                ", review='" + review + '\'' +
+                '}';
+    }
 }

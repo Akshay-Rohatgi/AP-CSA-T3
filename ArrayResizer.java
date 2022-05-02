@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayResizer {
+public class ArrayResizer extends Runner {
     public static boolean isNonZeroRow(int[][] array2D, int r) {
         for (int i = 0; i < array2D[r].length; i++) {
             if (array2D[r][i] == 0) {
@@ -52,7 +52,7 @@ public class ArrayResizer {
 
     }
 
-    public static void main(String[] args) {
+    public void run() {
         int[][] arr = {{2, 1, 0},
 
                 {1, 3, 2},
@@ -66,5 +66,11 @@ public class ArrayResizer {
         System.out.println(Arrays.deepToString(smaller));
 
     }
+
+    @Override
+    public String desc() {
+        return "ArrayResizer";
+    }
+
 
 }

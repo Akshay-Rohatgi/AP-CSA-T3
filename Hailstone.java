@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Hailstone {
+public class Hailstone extends Runner {
     public static int hailstoneLength(int n) {
         int count = 0;
 
@@ -41,10 +41,15 @@ public class Hailstone {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(hailstoneLength(8));
-        System.out.println(isLongSeq(5));
-        System.out.println(propLong(10));
+    @Override
+    public void run() {
+        System.out.println("Length with starter n=8 " + hailstoneLength(8));
+        System.out.println("isLongSeq with starter n=5 " + isLongSeq(5));
+        System.out.println("propLong with 10 tests " + propLong(10));
     }
 
+    @Override
+    public String desc() {
+        return "2020 Q1";
+    }
 }

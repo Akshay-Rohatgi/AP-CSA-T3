@@ -1,4 +1,4 @@
-public class GameSpinner {
+public class GameSpinner extends Runner {
     private int currentRunLength;
     private int sectorNum;
     private int prevSpin;
@@ -24,14 +24,20 @@ public class GameSpinner {
         return currentRunLength;
     }
 
-    public static void main(String[] args) {
+    public void run() {
+        System.out.println("Gamespinner with 12 sectors");
         GameSpinner g = new GameSpinner(12);
-        System.out.println(g.currentRun());
-        System.out.println(g.spin());
-        System.out.println(g.currentRun());
-        System.out.println(g.spin());
-        System.out.println(g.currentRun());
+        System.out.println("current run " + g.currentRun());
+        System.out.println("spin" + g.spin());
+        System.out.println("current run " + g.currentRun());
+        System.out.println("spin " + g.spin());
+        System.out.println("current run " + g.currentRun());
 
+    }
+
+    @Override
+    public String desc() {
+        return "2020 Q2";
     }
 
 }

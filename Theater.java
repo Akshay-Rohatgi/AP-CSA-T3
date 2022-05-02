@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Theater {
+public class Theater extends Runner {
     private Seat[][] theaterSeats;
 
     public Theater(int seatsPerRow, int tier1Rows, int tier2Rows) {
@@ -36,12 +36,16 @@ public class Theater {
         return theaterSeats;
     }
 
-    public static void main(String[] args) {
+    @Override
+    public void run() {
         Theater one = new Theater(3, 2, 1);
         System.out.println(Arrays.deepToString(one.getTheaterSeats()));
         boolean tmp = one.reassignSeat(0, 0, 2, 2);
         System.out.println(Arrays.deepToString(one.getTheaterSeats()));
-
     }
 
+    @Override
+    public String desc() {
+        return "2020 Q4";
+    }
 }

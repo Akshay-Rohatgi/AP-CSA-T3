@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ReviewCollector {
+public class ReviewCollector extends Runner {
     private ArrayList<ProductReview> reviewList;
     private ArrayList<String> productList;
 
@@ -26,6 +26,14 @@ public class ReviewCollector {
 
     }
 
+    public ArrayList<ProductReview> getReviewList() {
+        return reviewList;
+    }
+
+    public ArrayList<String> getProductList() {
+        return productList;
+    }
+
     public int getNumGoodReviews(String prodName) {
         int n = 0;
         for (String p : productList) {
@@ -34,6 +42,39 @@ public class ReviewCollector {
             }
         }
         return n;
+    }
+
+
+    public void run() {
+//        ReviewCollector r = new ReviewCollector();
+
+        ProductReview p1 = new ProductReview("grape", "the best");
+        addReview(p1);
+        System.out.println("Review List " + getReviewList().toString());
+        System.out.println("Product List " + getProductList().toString());
+
+        ProductReview p2 = new ProductReview("grape", "the best");
+        addReview(p2);
+        System.out.println("Review List " + getReviewList().toString());
+        System.out.println("Product List " + getProductList().toString());
+
+        ProductReview p3 = new ProductReview("crimson", "also the best");
+        addReview(p3);
+        System.out.println("Review List " + getReviewList().toString());
+        System.out.println("Product List " + getProductList().toString());
+
+        ProductReview p4 = new ProductReview("blue", "average L haver");
+        addReview(p4);
+        System.out.println("Review List " + getReviewList().toString());
+        System.out.println("Product List " + getProductList().toString());
+
+        System.out.println("Number of good reviews for blue: " + getNumGoodReviews("blue"));
+
+    }
+
+    @Override
+    public String desc() {
+        return "2020 Q3";
     }
 
 }
